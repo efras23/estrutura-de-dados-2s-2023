@@ -1,1 +1,8 @@
 # estrutura-de-dados-2s-2023
+
+Programa para verificar se número é primo ou não.
+Ele mostra "1", caso o número seja primo; e "0", caso contrário.
+
+Para que o programa funcione corretamente, deve-se seguir estas regras:
+    O número deve ser informado pela linha de comando, como argumento (argv) do programa. Exemplo: "./verifica_numero_primo.exe 23";
+    O número digitado deve ser estar entre -147483647 e 147483647, limite da variável inteira (int) na linguagem C.
