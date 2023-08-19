@@ -6,7 +6,7 @@ double calcular_dobro(double n){
 
 int main(int argc, char* argv[]){
 
-    printf("O dobro de %lf eh %lf\n", 20.3, calcular_dobro(20.3));
+    printf("O dobro de %lf eh %lf\n", 20.3, calcular_dobro(10));
 
     return 0;
 }
