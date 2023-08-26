@@ -16,7 +16,7 @@ int main(){
 
     for(i = 0; i < 5; i++){
         system("cls");
-        printf("MAIOR E MENOR NUMEROS\n\n");
+        printf("MENOR E MAIOR NUMEROS\n\n");
         printf("Digite 5 numeros inteiros:\n\n");
         printf("    %do: ", i + 1);
         scanf("%d", &nums[i]);
@@ -45,9 +45,9 @@ void maior_menor_num(int * nums){
 
     void mostrar_maior_menor(int * maior_num, int * menor_num){
         system("cls");
-        printf("MAIOR E MENOR NUMEROS\n\n");
-        printf("    MAIOR: %d\n", *maior_num);
-        printf("    menor: %d\n", *menor_num);
+        printf("MENOR E MAIOR NUMEROS\n\n");
+        printf("%d, %d", *menor_num, *maior_num);
+        //printf("    MAIOR: %d\n", *maior_num);
+        //printf("    menor: %d\n", *menor_num);
         printf("\n");
-        getch();        
     }

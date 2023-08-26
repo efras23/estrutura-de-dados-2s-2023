@@ -20,7 +20,7 @@ int main(){
         scanf("%d", &nums[i]);
     }
 
-    printf("Soma = %d", somar_inteiros(&nums));
+    printf("%d", somar_inteiros(nums));
 
     return 0;
 }
