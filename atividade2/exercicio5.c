@@ -6,10 +6,8 @@
 #include <stdio.h>
 #define TAM 3
 
-
-
-int main(){
-    int nums_1[TAM] = {5,7,9}, nums_2[TAM] = {11,13,17}, nums_multiplicados[TAM] = {0,0,0};
+void multiplicar_arrays(int nums_1[], int nums_2[]) {
+    int nums_multiplicados[TAM] = {0,0,0};
     int i = 0;
 
     //ARRAYS
@@ -51,6 +49,13 @@ int main(){
         }
     }
     printf("]");
+
+};
+
+int main(){
+    int nums_1[TAM] = {5,7,9}, nums_2[TAM] = {11,13,17};
+
+    multiplicar_arrays(nums_1, nums_2);
 
     return 0;
 }
