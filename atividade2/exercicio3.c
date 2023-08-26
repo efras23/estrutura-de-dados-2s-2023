@@ -4,6 +4,7 @@
     SAÍDA: mostrar 1 ou 0 para existência ou não da palavra no array
 */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <conio.h>
 
