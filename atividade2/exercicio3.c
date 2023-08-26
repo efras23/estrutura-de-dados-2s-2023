@@ -7,6 +7,19 @@
 #include <string.h>
 #include <conio.h>
 
+int buscar_palavra(char words[][30], char word_user[]){
+    int is_equal = 2;
+    int i = 0, j = 0;
+
+    for(i = 0; i < 3 && is_equal != 0; i++){
+        is_equal = strcmp(words[i], word_user);
+    }
+
+    is_equal == -1 ? is_equal *= -1: is_equal;
+
+    return !is_equal; //inverter saída para significar "existência ou não no array"
+};
+
 int main(){
     char word_user[51] = {'\0'};
     char words[3][30] = {
@@ -15,9 +28,8 @@ int main(){
                            "vetor"
                                   };
 
-    printf("Tamanho: %s %d", words[1], strlen(words[1]));
+    //printf("Tamanho: %s %d", words[1], strlen(words[1]));
 
-    /*
     do{
         system("cls");
         printf("ADIVINHE UMA DAS PALAVRAS\n\n");
@@ -36,9 +48,10 @@ int main(){
             getch();
         }
     } while (word_user[0] == '\0');
-    */
-
+    
     strlwr(word_user); //deixar palavra minúscula
+
+    printf("\n%d\n", buscar_palavra(words, word_user));
 
     return 0;
 }
