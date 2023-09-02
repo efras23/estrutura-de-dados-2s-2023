@@ -60,7 +60,7 @@ int main(int argc, char *argv[]){
     //calcular intercepcao (coeficiente linear)
     calcular_intercepcao(media_x, media_y, inclinacao, &intercepcao);
 
-    //FÓRMULA
+    //SAÍDA
     printf("FORMULA DA REGRESSAO LINEAR (dados.csv)\n\n");
     printf("\ty = %.1fx + %.0f", inclinacao, intercepcao);
     getch();
