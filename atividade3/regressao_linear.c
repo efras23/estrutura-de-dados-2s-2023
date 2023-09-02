@@ -3,8 +3,7 @@
 
     ENTRADA: registros do arquivo "dados.csv" que contêm valores x e y de pontos
     PROCESSAMENTO: calcular medias de todos valores x e y; inclinação e intercepcao da reta de regressão
-
-
+    SAÍDA: mostrar a devida equação da regressão linear (y = 0.8x + 7)
 */
 #include <stdio.h>
 #include <stdlib.h>
