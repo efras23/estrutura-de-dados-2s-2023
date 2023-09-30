@@ -1,5 +1,5 @@
 /*
-    Aula de 23/09/2023 sobre PILHAS, dando início às listas encadeadas.
+    Aula de 23/09/2023 sobre PILHAS, "LIFO", dando início às listas encadeadas.
     Fiz este código em casa, uma semana depois, copiando do professor (GitHub) e adaptando-o pro meu melhor entendimento.
     Agora, entendi esse programa; pq na aula não tava indo.
 */
