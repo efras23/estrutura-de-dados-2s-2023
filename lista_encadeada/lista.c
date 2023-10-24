@@ -7,12 +7,13 @@ No* no(float valor, No* proximo_no){
 
     no->valor = valor;
     no->proximo_no = proximo_no;
-    return 0;
+
+    return no;
 }
 
 void lista_inserir_no(No* H, No* no){
     if (H != NULL){
-        if(H->proximo_no = NULL){
+        if(H->proximo_no == NULL){
             H->proximo_no = no;
         }else{
             lista_inserir_no(H->proximo_no,no);
@@ -31,6 +32,7 @@ No* lista_copiar(No* H){
     if(H != NULL){
         return no(H->valor, lista_copiar(H->proximo_no));
     }
+    
     return NULL;
 }
 
