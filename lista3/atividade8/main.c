@@ -13,14 +13,22 @@ int main(int argc, char* argv[]){
 
     lista_imprimir(n0);
 
-    //
+
+
+    //ATIVIDADE 8
     printf("\nCaractere está na lista? %d", lista_verificar_existencia(n0, 'I'));
     printf("\nNumero de ocorrencias: %d", lista_verificar_ocorrencias(n0,'I'));
     lista_imprimir_inversa(n0);
+    //lista_inserir_no_i(n0, 2); INCOMPLETO
+    lista_remover_no_i(n0, 1);
+        printf("\n");
+        lista_imprimir(n0);
+    lista_remover_no(n0, 'A');
+        printf("\n");
+        lista_imprimir(n0);
 
+        
 
-
-    //liberar lista
     lista_liberar(n0);
 
     return 0;

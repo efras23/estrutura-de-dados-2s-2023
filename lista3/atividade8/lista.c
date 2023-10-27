@@ -96,6 +96,30 @@ void lista_imprimir_inversa(No* H){
     }
 }
 
-void lista_inserir_no_i(No* H, int i){
-    
+void lista_inserir_no_i(No* H, int i){//Não deveria haver um "valor" no parâmetro?
+
+}
+
+void lista_remover_no_i(No* H, int i){
+    if (H != NULL && i >= 0) {
+        if (i == 0 && H->proximo_no != NULL) {
+            No* no_remover = H->proximo_no;
+            H->proximo_no = H->proximo_no->proximo_no;
+            free(no_remover);
+        } else {
+            lista_remover_no_i(H->proximo_no, i - 1);
+        }
+    }    
+}
+
+void lista_remover_no(No* H, char valor_busca) {
+    if (H != NULL) {
+        if (H->proximo_no != NULL && H->proximo_no->valor == valor_busca) {
+            No* no_remover = H->proximo_no;
+            H->proximo_no = H->proximo_no->proximo_no;
+            free(no_remover);
+        } else {
+            lista_remover_no(H->proximo_no, valor_busca);
+        }
+    }
 }
