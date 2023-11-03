@@ -1,61 +1,33 @@
+//ATIVIDADE 9
 #include <stdio.h>
 #include <stdlib.h>
 #include "lista.h"
 
-No* no(char valor, No* proximo_no){
-    No* no = malloc(sizeof(No));
+void lista_inserir_no_ordenado(No *H, No *no) {
+    No *anterior = H;
+    No *atual = H->proximo_no;
 
-    no->valor = valor;
-    no->proximo_no = proximo_no;
-
-    return no;
-}
-
-void lista_inserir_no(No* H, No* no){
-    if (H != NULL){
-        if(H->proximo_no == NULL){
-            H->proximo_no = no;
-        }else{
-            lista_inserir_no(H->proximo_no,no);
-        }
-    }
-}
-
-void lista_imprimir(No* H){
-    if(H != NULL){
-        printf("%c ", H->valor);
-        lista_imprimir(H->proximo_no);
-    }
-}
-
-No* lista_copiar(No* H){
-    if(H != NULL){
-        return no(H->valor, lista_copiar(H->proximo_no));
-    }
-    
-    return NULL;
-}
-
-void lista_concatenar(No* H, No* Hc){
-    lista_inserir_no(H, Hc);
-}
-
-void lista_liberar(No* H){
-    if (H != NULL){
-        lista_liberar(H->proximo_no);
-        free(H);
-    }
-}
-
-int lista_quantidade_nos(No* H){
-    if(H != NULL){
-        return 1 + lista_quantidade_nos(H->proximo_no);
+    while (atual != NULL && atual->valor < no->valor) {
+        anterior = atual;
+        atual = atual->proximo_no;
     }
 
-    return 0;
+    anterior->proximo_no = no;
+    no->proximo_no = atual;
 }
 
-//ATIVIDADE 9
-void lista_inserir_no_ordenado(No* L, No* no){
-    
+void inserir_valor_lista_ordenada(No *lista_ordenada, float valor) {
+    No *novo_no = (No *)malloc(sizeof(No));
+
+    novo_no->valor = valor;
+    novo_no->proximo_no = NULL;
+    lista_inserir_no_ordenado(lista_ordenada, novo_no);
+}
+
+void inserir_valor_lista_nao_ordenada(No *lista_nao_ordenada, float valor) {
+    No *novo_no = (No *)malloc(sizeof(No));
+
+    novo_no->valor = valor;
+    novo_no->proximo_no = lista_nao_ordenada->proximo_no;
+    lista_nao_ordenada->proximo_no = novo_no;
 }
