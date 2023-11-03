@@ -1,8 +1,6 @@
 //ATIVIDADE 9
 /*
-    Coloquei 2 arquivos. Executando o "1kk_rand_float.csv", o programa nem termina; já com o "1kk_rand_float_simp.csv" observa-se um tempo de inserção ligeiramente maior na LISTA ORDENADA (com raras exceções).
-
-    #Devidos créditos a Yasmin e seu código iluminado.
+    Coloquei 2 arquivos. Executando o "1kk_rand_float.csv" (100k registros), o programa nem termina; já com o "1kk_rand_float_simp.csv" (10k) é possível observa um tempo de inserção ligeiramente maior na LISTA ORDENADA, na casa dos microssegundos.
 */
 #include <stdio.h>
 #include <stdlib.h>
