@@ -1,21 +1,25 @@
+//ATIVIDADE 10
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "tabela_hash.h"
+
 #define TAMANHO_TABELA 100
 
 Hash* table[TAMANHO_TABELA]; //criação da tabela
 
 //inicializar tabela com valores nulos
 void hash_table_init() {
-    for (int i = 0; i < TAMANHO_TABELA; i++) {
+    int i = 0;
+
+    for (i = 0; i < TAMANHO_TABELA; i++) {
         table[i] = NULL;
     }
 }
 
 int hash(char* chave){
     int hash = 0;
-    for (int i = 0; chave[i] != '\0'; i++) {
+    int i = 0;
+    for (i = 0; chave[i] != '\0'; i++) {
         hash = (hash + chave[i]) % TAMANHO_TABELA;
     }
 
@@ -28,7 +32,7 @@ char* hash_table_get(char* chave){
 
     while (hash != NULL) {
         if (strcmp(hash->chave, chave) == 0) {
-            return hash->dado;
+            return hash->valor;
         }
         hash = hash->proximo;
     }
@@ -36,12 +40,12 @@ char* hash_table_get(char* chave){
     return NULL;
 }
 
-void hash_table_put(char* chave, char* dado){
+void hash_table_put(char* chave, char* valor){
     int indice = hash(chave); //chave convertida pra inteiro
     Hash* novo_hash = (Hash*)malloc(sizeof(Hash));
 
     novo_hash->chave = chave;
-    novo_hash->dado = dado;
+    novo_hash->valor = valor;
     novo_hash->proximo = table[indice];
     table[indice] = novo_hash;
 }
