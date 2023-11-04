@@ -1,4 +1,4 @@
-//ATIVIDA 10
+//ATIVIDADE 10
 #include <stdio.h>
 #include <stdlib.h>
 #include "tabela_hash.h"
